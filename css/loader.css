@@ -1,0 +1,106 @@
+body {
+	margin: 0px;
+	display: flex;
+	background-color: black;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* .container {
+	width: 350px;
+	height: 350px;
+	border-radius: 100%;
+	background: linear-gradient(165deg, rgba(255,255,255,1) 0%, rgb(220, 220, 220) 40%, rgb(170, 170, 170) 98%, rgb(10, 10, 10) 100%);
+	position: relative;
+}
+
+.loader {
+	
+}
+
+.loader:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	border-bottom: 0 solid #ffffff05;
+	
+	box-shadow: 
+		0 -10px 20px 20px #ffffff40 inset,
+		0 -5px 15px 10px #ffffff50 inset,
+		0 -2px 5px #ffffff80 inset,
+		0 -3px 2px #ffffffBB inset,
+		0 2px 0px #ffffff,
+		0 2px 3px #ffffff,
+		0 5px 5px #ffffff90,
+		0 10px 15px #ffffff60,
+		0 10px 20px 20px #ffffff40;
+	filter: blur(3px);
+	animation: 2s rotate linear infinite;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg)
+	}
+} */
+
+.loader {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 14.6rem;
+	margin-top: calc(14.6rem / 2);
+	margin-bottom: calc(14.6rem / 2);
+}
+
+.loader::before,
+::after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	animation-duration: 1.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	filter: drop-shadow(0 0 1.7rem/2.25 rgba(#fff, 0.75));
+}
+
+.loader::before {
+	width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1.7rem #fff;
+    animation-name: pulsA;
+}
+
+.loader::after {
+	width: calc(100% - (1.7rem*2));
+    padding-bottom: calc(100% - (1.7rem*2));
+    box-shadow: 0 0 0 0 #fff
+	0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff;
+    animation-name: pulsB;
+}
+
+@keyframes pulsA {
+	0% { box-shadow: inset 0 0 0 1.7rem #fff;opacity: 1; }
+	50%, 100% { box-shadow: inset 0 0 0 0 #fff,
+		0 0 20px #fff,
+		0 0 40px #fff,
+		0 0 60px #fff,
+		0 0 80px #fff; opacity: 0; }
+  }
+  
+  @keyframes pulsB {
+	0%, 50% { box-shadow: 0 0 0 0 #fff,
+		0 0 20px #fff,
+		0 0 40px #fff,
+		0 0 60px #fff,
+		0 0 80px #fff; opacity: 0; }
+	100% { box-shadow: 0 0 0 1.7rem #fff; 
+		opacity: 1; }
+  }
