@@ -1,5 +1,5 @@
 # BrasilCompras
- O projeto continua. Essa versão foi descartada por que a responsividade ficou prejudicada.\
+ O projeto continua. Essa versão foi descartada porque a responsividade ficou prejudicada.\
  A nova versão ainda não foi submetida ao Github.\
  Alguns elementos do Design foram alterados, como as fontes.\
  A utilização de ScrollTrigger interagindo com a reprodução de vídeos tornou a navegação pesada, por isso foi descartado nesse modelo.\
